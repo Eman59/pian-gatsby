@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Name",
+        "position": "Position",
+        "email": "email@email.com",
+        "img": "/images/team-img.png"
+    },
+    {
+        "name": "Name",
+        "position": "Position",
+        "email": "email@email.com",
+        "img": "/images/team-img.png"
+    },
+    {
+        "name": "Name",
+        "position": "Position",
+        "email": "email@email.com",
+        "img": "/images/team-img.png"
+    },
+    {
+        "name": "Name",
+        "position": "Position",
+        "email": "email@email.com",
+        "img": "/images/team-img.png"
+    },
+    {
+        "name": "Name",
+        "position": "Position",
+        "email": "email@email.com",
+        "img": "/images/team-img.png"
+    }
+]

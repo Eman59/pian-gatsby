@@ -1,0 +1,105 @@
+@media (max-width:768px) {
+  .hero-section {
+    min-height: 100vh
+  }
+}
+
+@media (min-width:769px) {
+  .hero-section {
+    min-height: 100vh
+  }
+}
+
+.hero-section {
+  width: 100%
+}
+
+@media (min-width:501px) and (max-width:992px) {
+  .hero-section {
+    padding-left: 3rem;
+    padding-right: 3rem
+  }
+}
+
+@media (max-width:500px) {
+  .hero-section {
+    padding-left: 2rem;
+    padding-right: 2rem
+  }
+}
+
+@media (min-width:993px) {
+  .hero-section {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem
+  }
+}
+
+.hero-section {
+  position: relative
+}
+
+.hero-section .hero-logo {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  height: auto;
+  width: 4.35rem;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+@media (max-width:768px) {
+  .hero-section .hero-logo {
+    top: 40%
+  }
+}
+
+@media (min-width:769px) {
+  .hero-section .hero-logo {
+    top: 58%
+  }
+}
+
+.hero-section .hero-heading {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-align: center;
+  font-weight: 300;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity))
+}
+
+@media (max-width:768px) {
+  .hero-section .hero-heading {
+    top: 50%;
+    font-size: 1.55rem
+  }
+}
+
+@media (min-width:769px) {
+  .hero-section .hero-heading {
+    top: 48%;
+    font-size: 1.25rem
+  }
+}
+
+.hero-section a,
+.hero-section button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  z-index: 1;
+  height: auto;
+  width: 2.125rem;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.video-overlay:after {
+  content: var(--tw-content);
+  background-color: #0000008c
+}

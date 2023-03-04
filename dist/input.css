@@ -1,0 +1,374 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    html {
+        @apply lg:text-[1.167vw] max-lg:text-[16px];
+    }
+
+    body {
+        @apply font-suisseIntl font-medium text-[0.9rem];
+    }
+
+    .section-padding {
+        @apply relative md:py-[4.5rem] max-md:py-16;
+    }
+
+    .section-padding-t {
+        @apply md:pt-[4.5rem] max-md:pt-16;
+    }
+
+    .section-padding-b {
+        @apply md:pb-[4.5rem] max-md:pb-16;
+    }
+
+    .section-height {
+        @apply md:min-h-[100vh] max-md:min-h-[120vh]; 
+    }
+
+    .container {
+        @apply w-full lg:px-[6.5rem] mm-all:px-[3rem] max-sm:px-8; 
+    }
+
+    .container-r {
+        @apply w-full lg:pr-[6.5rem] mm-all:px-[3rem] max-sm:px-8; 
+    }
+
+    .container-full {
+        @apply w-full px-5
+    }
+
+    .main-btn {
+        @apply px-7 py-2 bg-custom-gray border-[1px] border-custom-gray text-custom-green inline-block max-w-fit transition-all duration-300 ease-linear outline outline-custom-gray -outline-offset-[0.125rem] outline-[0.125rem] hover:bg-transparent hover:outline-offset-[0.125rem];
+    }
+
+    .heading {
+        @apply text-[1.2rem] font-normal leading-tight;
+    }
+
+    .site-header {
+        @apply absolute top-0 left-0 w-full z-50 md:px-[5.3rem] max-md:px-8 py-[2.9rem] max-md:flex max-md:flex-col max-md:justify-between;
+    }
+
+    .site-header .nav-logo {
+        @apply md:ml-[1.5rem] max-md:ml-auto;
+    }
+
+    .site-header .nav-logo svg {
+        @apply md:w-[3rem] max-md:w-[3.5rem] h-auto;
+    }
+
+    .site-header nav {
+        @apply flex items-center md:justify-between md:pr-8
+    }
+
+    .site-header nav .nav-toggler {
+        @apply max-md:ml-auto max-md:w-5 max-md:h-5 relative md:hidden
+    }
+
+    .site-header nav .nav-toggler svg {
+        @apply max-md:w-full max-md:absolute max-md:top-0 max-md:left-0 overflow-visible
+    }
+
+    .site-header nav .nav-toggler svg line {
+        @apply transition-transform duration-300 ease-linear
+    }
+
+    .site-header nav .nav-toggler svg line:nth-of-type(1) {
+        @apply  origin-[revert];
+    }
+
+    .site-header nav .nav-toggler svg line:nth-of-type(2) {
+        @apply origin-right
+    }
+
+
+    .site-header nav .nav-toggler.active svg line:nth-of-type(1) {
+        @apply rotate-45;
+    }
+
+    .site-header nav .nav-toggler.active svg line:nth-of-type(2) {
+        @apply -rotate-45 translate-x-[-12px] translate-y-[-14px]
+    }
+
+    .site-header .nav-link {
+        @apply  text-custom-gray max-md:text-sm max-md:text-center
+    }
+
+    .site-header .mobile-nav {
+        @apply  hidden max-md:flex-col items-center gap-6
+    }
+
+    
+    .site-header.active .mobile-nav {
+        @apply  max-md:flex max-md:flex-col items-center gap-6
+    }
+
+    .site-header .mobile-nav .nav-link {
+        @apply block font-normal
+    }
+
+    .site-header.active {
+        @apply bg-custom-green fixed min-h-screen
+    }
+
+    .hero-section {
+        @apply section-height relative container;
+    }
+    
+    .hero-section .hero-logo {
+        @apply absolute md:top-[58%] max-md:top-[40%] left-1/2 -translate-x-1/2 z-[1] w-[4.35rem] h-auto;
+    }
+
+    .hero-section .hero-heading {
+        @apply absolute md:top-[48%] max-md:top-[50%] text-center left-1/2 -translate-x-1/2 z-[1] text-white md:text-[1.25rem] max-md:text-[1.55rem] font-light;
+    }
+
+    .wrapper-video, .wrapper-bg {
+        @apply absolute top-0 left-0 h-full w-full object-cover pointer-events-none block;
+    }
+
+    .video-overlay {
+        @apply after:absolute after:h-full after:w-full after:bg-overlay after:block after:left-0 after:top-0;
+    } 
+
+    .hero-section button, .hero-section a {
+        @apply absolute bottom-8 left-1/2 -translate-x-1/2 z-[1] w-[2.125rem] h-auto;
+    }
+
+    .acknowledges-section {
+        @apply section-padding container flex items-center justify-center pt-[10.063rem] pb-[9.438];
+    }
+
+    .acknowledges-inner {
+        @apply max-w-[41.5rem] w-full text-center;
+    }
+
+    .video-wrapper {
+        @apply relative min-h-[105vh] container
+    }
+
+    .compassion-section {
+        @apply section-padding container
+    }
+
+    .compassion-section .heading.main-heading {
+        @apply text-center max-w-lg mx-auto
+    }
+
+    .compassion-wrapper {
+        @apply my-[5.4rem] border-t-[1px] border-t-custom-green
+    }
+
+    .compassion-item {
+        @apply pt-[2.4rem] pb-[5.6rem] md:grid grid-cols-2 border-b-[1px] border-b-custom-green
+    }
+
+    .compassion-text {
+        @apply md:pr-[3.3rem] md:pl-8 max-md:mt-6 grid gap-3
+    }
+
+    .compassion-text .main-btn {
+        @apply mt-6
+    }
+
+    .compassion-text ul {
+        @apply list-disc list-inside
+    }
+
+    .team-grid {
+        @apply section-padding-b container grid md:grid-cols-3 sm:grid-cols-2 gap-8
+    }
+
+    .team-grid .team-item {
+        @apply relative;
+    }
+
+    .team-grid .team-img {
+        @apply relative overflow-hidden mb-4
+    }
+
+    .team-grid .team-img img {
+        @apply w-full
+    }
+
+    .team-grid .team-item h2 {
+        @apply font-bold mb-1
+    }
+
+    .team-grid .team-item a {
+        @apply text-custom-gray
+    }
+
+    .services-tab {
+        @apply relative border-b-[0.09rem] border-b-black
+    }
+
+    .services-tabs .services-tab .tab-btn {
+        @apply py-6 flex items-center gap-x-2 text-left justify-between w-full sm:text-[1.25rem] max-sm:text-[1.15rem] text-custom-gray-shade;
+    }
+    .services-tabs .services-tab .tab-body {
+        @apply h-0 overflow-hidden transition-all duration-300 ease-linear
+    }
+
+    .services-tabs .services-tab .tab-body-inner {
+        @apply pb-6;
+    }
+
+    .services-tabs .services-tab .tab-btn svg {
+        @apply h-5 w-5;
+    }
+
+    .services-tabs .services-tab .tab-btn svg line {
+        @apply transition-transform duration-300 ease-linear origin-center;
+    }
+
+    .services-tabs .services-tab .tab-btn.active svg line:first-child {
+        @apply rotate-90;
+    }
+
+    .blog-grid-item {
+        @apply relative container-r md:my-32 max-md:my-20 grid md:grid-cols-2 md:gap-24 max-md:gap-11;
+    }
+
+    .blog-grid-item .blog-img {
+        @apply relative;
+    }
+
+    .blog-grid-item .blog-img img {
+        @apply w-full object-cover;
+    }
+
+    .blog-grid-item .blog-text {
+        @apply md:pl-8;
+    }
+
+    .blog-grid-item .blog-text .blog-text-inner {
+        @apply border-t-[0.09rem] border-t-black md:flex md:flex-col md:justify-end h-full md:pt-5 max-md:pt-11;
+    }
+
+    .blog-grid-item .blog-text .blog-text-inner .heading {
+        @apply max-w-[16rem] w-full mb-6
+    }
+
+    .blog-grid-item .blog-text .blog-text-inner p {
+        @apply mb-4
+    }
+
+    .blog-grid-item .blog-text .blog-text-inner .main-btn {
+        @apply md:mt-16 max-md:mt-6
+    }
+
+    .story-section {
+        @apply section-padding container bg-custom-gray
+    }
+
+    .story-section .story-grid {
+        @apply flex gap-x-8 gap-y-20 lg:pt-20 max-lg:pt-4 flex-wrap
+    }
+
+    .story-section .story-grid .grid-img {
+        @apply w-full sm:mb-8 max-sm:mb-11 max-h-[29.3rem]
+    }
+
+    .story-section .story-grid .story-text {
+        @apply border-t-[0.09rem] border-t-black pt-8 flex max-sm:flex-col gap-6 sm:items-center justify-between
+    }
+
+    .story-section .story-grid .story-text .main-btn {
+        @apply border-black !outline-none hover:bg-black hover:text-white
+    }
+
+    .story-section .story-grid .story-item:nth-of-type(1) {
+        @apply lg:max-w-2xl max-lg:max-w-full w-full
+    }
+
+    .story-section .story-grid .story-item:nth-of-type(2) {
+        @apply flex-1 sm:min-w-[20rem]
+    }
+
+    footer {
+        @apply bg-custom-green pt-[3.7rem] pb-10 flex justify-between container text-custom-gray items-start max-md:flex-col max-md:gap-y-11;
+    }
+
+    footer .footer-logo {
+        @apply max-w-[3.55rem]
+    }
+
+    footer .footer-menu {
+        @apply relative;
+    }
+    
+    footer .footer-link {
+        @apply block md:text-[0.75rem] max-md:text-[0.8rem] font-normal max-w-fit mb-[0.45rem] last:mb-0
+    }
+
+    footer .footer-newslatter {
+        @apply max-w-[21rem] w-full
+    }
+
+    footer .footer-newslatter label {
+        @apply block w-full
+    }
+
+    footer .footer-follow {
+        @apply max-w-[7rem] w-full
+    }
+
+    footer .footer-newslatter input {
+        @apply bg-transparent md:text-[0.75rem] max-md:text-[0.8rem] w-full mt-9 pb-2 border-b-[0.0625rem] border-custom-gray !outline-0 !shadow-none;
+    }
+    
+
+
+
+
+    /* Contact Wrapper */
+
+    .contact-wrapper {
+        @apply fixed top-0 left-0 w-full z-50 opacity-0 pointer-events-none;
+    }
+
+    .contact-wrapper.active {
+        @apply flex justify-end opacity-100 pointer-events-auto;
+    }
+
+    .contact-wrapper-overlay {
+        @apply bg-overlay absolute top-0 left-0 w-full h-full;
+    }
+
+    body.active {
+        @apply overflow-hidden;
+    }
+
+    .contact-wrapper-main {
+        @apply md:max-w-[35rem] max-w-xs md:translate-x-[34rem] translate-x-80 w-full bg-custom-green relative z-[60] md:px-[6.6rem] px-5 md:pt-9 md:pb-20 pt-1 pb-10 flex flex-col transition-all duration-300 ease-linear overflow-y-auto h-screen;
+    }
+
+    .contact-wrapper.active .contact-wrapper-main {
+        @apply opacity-100 translate-x-0;
+    }
+
+    .close-contact {
+        @apply ml-auto text-[1.8rem] text-white transition-colors duration-300;
+    }
+
+    .contact-wrapper-form {
+        @apply md:mt-[6.4rem] max-md:mt-5 font-thin;
+    }
+
+    .contact-wrapper-main form {
+        @apply border-t-[0.063rem] border-t-white md:mt-[7.8rem] max-md:mt-5 font-thin;
+    }
+
+    .contact-wrapper-main form textarea, .contact-wrapper-main form input {
+        @apply border-b-[0.063rem] border-b-white block bg-transparent w-full shadow-none outline-none placeholder:text-white text-white resize-none md:py-1 py-2 md:text-sm text-xs;
+    }
+
+    .contact-wrapper-main form button[type=submit] {
+        @apply md:mt-20 mt-5 bg-transparent text-white outline-none hover:bg-white hover:text-black font-normal
+    }
+
+    /* Contact Wrapper */
+}
